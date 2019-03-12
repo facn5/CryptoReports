@@ -23,15 +23,24 @@ fetch("https://newsapi.org/v2/everything?q=bitcoin&from=2019-02-12&sortBy=publis
 
 
    //getting the images
-    document.getElementById("boximg1").src =data.articles[0].urlToImage;
-    document.getElementById("boximg2").src =data.articles[1].urlToImage;
-    document.getElementById("boximg3").src =data.articles[2].urlToImage;
-    document.getElementById("boximg4").src =data.articles[3].urlToImage;
-    document.getElementById("boximg5").src =data.articles[4].urlToImage;
-    document.getElementById("boximg6").src =data.articles[5].urlToImage;
+   document.getElementById("boximg1").src =data.articles[0].urlToImage;
+   document.getElementById("boximg2").src =data.articles[1].urlToImage;
+   document.getElementById("boximg3").src =data.articles[2].urlToImage;
+   document.getElementById("boximg4").src =data.articles[3].urlToImage;
+   document.getElementById("boximg5").src =data.articles[4].urlToImage;
+   document.getElementById("boximg6").src =data.articles[5].urlToImage;
 
     console.log(data.articles[0].title);
 
+
+    //getting the article links
+
+    document.getElementById("url1").href=data.articles[0].url;
+    document.getElementById("url2").href =data.articles[1].url;
+    document.getElementById("url3").href =data.articles[2].url;
+    document.getElementById("url4").href =data.articles[3].url;
+    document.getElementById("url5").href =data.articles[4].url;
+    document.getElementById("url6").href =data.articles[5].url;
 
   })
 
