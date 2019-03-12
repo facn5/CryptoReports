@@ -24,7 +24,6 @@ a {
   display: grid;
   grid-template-columns: 50% 50%;
   word-wrap: break-word;
-
 }
 
 .box {
@@ -45,8 +44,7 @@ header {
 
 p {
   text-align: center;
-    word-break: break-all;
-
+  word-break: break-all;
 }
 
 #header h1 {
@@ -65,7 +63,6 @@ p {
   text-align: right;
   background: #3cc091;
   width: 100%;
-
 }
 
 #moving-header p {
