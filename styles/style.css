@@ -5,7 +5,7 @@ body {
 }
 
 h3 {
-  align-text: center;
+  text-align: center;
 }
 
 .bottom {
@@ -16,7 +16,7 @@ h3 {
 button {
   margin-top: 7px;
   background-color: green;
-  color: white;
+  color: #dadada;
   transition: all .5s ease;
   padding: 10px;
 }
@@ -92,10 +92,9 @@ p {
 }
 
 #moving-header {
-  position: relative;
-  display: inline-block;
+  display: block;
   text-align: right;
-  background: #3cc091;
+  background: green;
   width: 100%;
 }
 
@@ -104,6 +103,9 @@ p {
   padding: 20px;
   font-size: 18px;
   letter-spacing: 2px;
+  cursor: text;
+  user-select: none;
+  -webkit-user-select:none;
   text-align: right;
   animation: marquee 15s linear infinite;
   margin: 0;
@@ -143,12 +145,14 @@ p {
 
   #moving-header1:empty {
     height: 2vw;
+    cursor: default;
+
   }
 
   #moving-header {
     position: relative;
     margin: 0;
-    background: #3cc091;
+    background: green;
     grid-column: 1/4;
   }
 
