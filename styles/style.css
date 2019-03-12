@@ -66,3 +66,12 @@ text-align: center;
 
   }
 }
+
+ img{
+
+   display: block;
+    left: 25px;
+    max-width: 49.99%;
+    min-width: 49.99%;
+    top: 25px;
+ }
