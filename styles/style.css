@@ -79,8 +79,19 @@ justify-content: center;
 
 
 
+<<<<<<< HEAD
 
  @media screen and (min-width: 600px) {
+=======
+  #moving-header{
+    position: relative;
+      height: 6vw;
+      margin: 0;
+      background: #3cc091;
+      grid-column: 1/4;
+  }
+}
+>>>>>>> aada8e2c1fdfa7f6c2f197fd0629d7319e2478c1
 
 
    #content-container{
