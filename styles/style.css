@@ -17,6 +17,10 @@ img{
    align-self:center;
 
 }
+a{
+ text-align: center;
+
+}
 #content-container{
 display: grid;
 grid-template-columns: 1fr 1fr;
