@@ -7,6 +7,11 @@ h3 {
   align-text: center;
 }
 
+.bottom {
+  margin-top: auto;
+  text-align: center;
+}
+
 img {
   display: block;
   left: 25px;
