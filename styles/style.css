@@ -17,6 +17,7 @@ button {
   margin-top: 7px;
   background-color: green;
   color: #dadada;
+  border: 1px black solid;
   transition: all .5s ease;
   padding: 10px;
 }
