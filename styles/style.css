@@ -16,8 +16,8 @@ h3 {
 button {
   margin-top: 7px;
   background-color: green;
-  color: #dadada;
-  border: 1px black solid;
+  color: white;
+  border: none;
   transition: all .5s ease;
   padding: 10px;
 }
