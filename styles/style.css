@@ -85,7 +85,6 @@ text-align: center;
       margin: 0;
       background: #3cc091;
       grid-column: 1/4;
-
   }
   #moving-header p {
     animation: marquee 22s linear infinite;
