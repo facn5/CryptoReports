@@ -1,6 +1,6 @@
 body{
 background-color: #dadada;
-
+margin: 0;
 
 }
 h3{
@@ -9,7 +9,7 @@ h3{
 }
 img{
 
-  display: flex;
+  display: block;
    left: 25px;
    height: 160px;
    width: 160px;
@@ -59,85 +59,65 @@ text-align: center;
 
 }
 
-#moving-header{
-  position: relative;
-    height: 6vw;
-    margin: 0;
+#moving-header {
+    position: relative;
+    display: inline-block;
+    text-align: right;
     background: #3cc091;
     grid-column: 1/3;
 
 }
 
+#moving-header p {
+  padding-left: 100%;
+  padding:20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: right;
+  animation: marquee 15s linear infinite;
+  margin: 0;
+}
 
+.marquee {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@media screen and (min-width: 600px) {
+  #content-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+  }
+  img{
+    height: 300px;
+    width:300px;
+  }
 .box{
 display: flex;
 
 justify-content: center;
  }
 
- #moving-header p {
-   padding-left: 100%;
-   padding:20px;
-   font-size: 18px;
-   letter-spacing: 2px;
-   text-align: right;
-   animation: marquee 15s linear infinite;
-   margin: 0;
+ #moving-header1:empty {
+   height: 2vw;
  }
-
- .marquee {
-     margin: 0 auto;
-     overflow: hidden;
- }
-
- /* Make it move */
- @keyframes marquee {
-     0%   { transform: translate(0, 0); }
-     100% { transform: translate(-100%, 0); }
- }
-
-
-
-
- @media screen and (min-width: 600px) {
-   #moving-header1:empty {
-     height: 2vw;
-   }
-     #moving-header{
-       position: relative;
-         margin: 0;
-         background: #3cc091;
-         grid-column: 1/4;
-     }
-     #moving-header p {
-       animation: marquee 22s linear infinite;
-
-     }
-
-
-   #content-container{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-
-   }
-}
-
    #moving-header{
      position: relative;
-    display: inline-block;
-    text-align: right;
-    background: #3cc091;
-    grid-column: 1/4;
+       margin: 0;
+       background: #3cc091;
+       grid-column: 1/4;
+   }
+   #moving-header p {
+     animation: marquee 22s linear infinite;
 
    }
 
-
-
-
-img{
-  width: 300px;
-  height: 300px;
-
-}
-
- }
+  }
