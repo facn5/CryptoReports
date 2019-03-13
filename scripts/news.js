@@ -1,5 +1,5 @@
 
-fetch("https://newsapi.org/v2/everything?q=cryptocurrency&from=2019-02-12&sortBy=publishedAt&apiKey=decbac612c734abab9d1c80dc0a5f17a")
+fetch("https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=decbac612c734abab9d1c80dc0a5f17a")
   .then((resp) => resp.json())
   .then(function (data) {
 
@@ -29,7 +29,7 @@ fetch("https://newsapi.org/v2/everything?q=cryptocurrency&from=2019-02-12&sortBy
    document.getElementById("boximg6").src =data.articles[5].urlToImage;
 
        CheckIfImageIsNull();
-  
+
     console.log(data.articles[0].title);
 
 
@@ -47,19 +47,19 @@ fetch("https://newsapi.org/v2/everything?q=cryptocurrency&from=2019-02-12&sortBy
 function CheckIfImageIsNull() {
   if( data.articles[0].urlToImage == null )
     document.getElementById("boximg1").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
-  
+
     if( data.articles[1].urlToImage == null )
     document.getElementById("boximg2").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
-  
+
     if( data.articles[2].urlToImage == null )
     document.getElementById("boximg3").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
-  
+
     if( data.articles[3].urlToImage == null )
     document.getElementById("boximg4").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
-  
+
     if( data.articles[4].urlToImage == null )
     document.getElementById("boximg5").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
-  
+
     if( data.articles[5].urlToImage == null )
    document.getElementById("boximg6").src = "https://image.freepik.com/free-vector/404-error-web-template-with-mad-cat_23-2147763345.jpg"
 }
