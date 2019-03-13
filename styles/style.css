@@ -21,6 +21,9 @@ button {
   background-color: #fcc118;
   color: black;
   border: none;
+  user-select: none;
+ -webkit-user-select:none;
+ -webkit-user-drag:none;
   transition: all .5s ease;
   padding: 10px;
   border-radius: 15%;
@@ -38,6 +41,9 @@ img {
   display: block;
   left: 25px;
   height: 160px;
+  user-select: none;
+ -webkit-user-select:none;
+ -webkit-user-drag:none;
   width: auto;
   top: 25px;
   transition: all 1.2s ease;
@@ -75,6 +81,7 @@ border-radius: 10%;
 h1 {
   user-select: none;
   -webkit-user-select: none;
+  -webkit-user-drag:none;
   font-family: 'Sniglet';
 }
 
@@ -119,6 +126,7 @@ p {
   cursor: text;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-user-drag:none;
   text-align: right;
   animation: marquee 15s linear infinite;
   margin: 0;
