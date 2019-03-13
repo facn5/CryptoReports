@@ -16,7 +16,7 @@ fetch(`https://api.ipify.org/?format=json`)
 
 function getCurrency(userIP) {
   console.log(userIP)
-  fetch(`https://api.ipstack.com/${userIP}?access_key=542bfb03ae4cc0573131144dcce349be`)
+  fetch(`http://api.ipstack.com/${userIP}?access_key=542bfb03ae4cc0573131144dcce349be`)
     .then(function(response) {
       return response.json();
     })
