@@ -20,20 +20,47 @@ function SubStr()
 function buttonClicked() {
   console.log(continent)
 
-  if ( continent == "Asia" )
-  {
-    userCurrency = "NIS"
+  if ( continent == "Asia" ) userCurrency = "NIS";
+  else if (continent == "Europe") userCurrency = "EUR";
+  else if (continent == "Australia") userCurrency = "AUD";
+  else userCurrency = "USD";
 fetch(crypto_api_url + userCurrency + currency_api_key)
   .then(function(response) {
     return response.json();
   })
   .then(function(data) {
+    if (userCurrency == "NIS") {
     userCurrencyToBtc = 1 / data.rates[0].rate;
     userCurrencyToLtc = 1 / data.rates[1].rate;
     userCurrencyToXrp = 1 / data.rates[52].rate;
     userCurrencyToBch = 1 / data.rates[49].rate;
     userCurrencyToEth = 1 / data.rates[11].rate;
     userCurrencyToEos = 1 / data.rates[6].rate;
+  }
+  else if (userCurrency ==  "EUR") {
+    userCurrencyToBtc = 1 / data.rates[1].rate;
+    userCurrencyToLtc = 1 / data.rates[3].rate;
+    userCurrencyToXrp = 1 / data.rates[7].rate;
+    userCurrencyToBch = 1 / data.rates[15].rate;
+    userCurrencyToEth = 1 / data.rates[252].rate;
+    userCurrencyToEos = 1 / data.rates[8].rate;
+  }
+  else if (userCurrency ==  "AUD") {
+    userCurrencyToBtc = 1 / data.rates[0].rate;
+    userCurrencyToLtc = 1 / data.rates[3].rate;
+    userCurrencyToXrp = 1 / data.rates[1].rate;
+    userCurrencyToBch = 1 / data.rates[5].rate;
+    userCurrencyToEth = 1 / data.rates[4].rate;
+    userCurrencyToEos = 1 / data.rates[9].rate;
+  }
+  else {
+    userCurrencyToBtc = 1 / data.rates[0].rate;
+    userCurrencyToLtc = 1 / data.rates[9].rate;
+    userCurrencyToXrp = 1 / data.rates[18].rate;
+    userCurrencyToBch = 1 / data.rates[10].rate;
+    userCurrencyToEth = 1 / data.rates[6].rate;
+    userCurrencyToEos = 1 / data.rates[2].rate;
+  }
 
     SubStr();
 
@@ -43,31 +70,5 @@ fetch(crypto_api_url + userCurrency + currency_api_key)
   .catch(function(m) {
     console.log(m)
   });
-}
-else if ( continent == "Europe" )
-{
-  userCurrency = "EUR"
-
-  fetch(crypto_api_url + userCurrency + currency_api_key)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      userCurrencyToBtc = 1 / data.rates[1].rate;
-      userCurrencyToLtc = 1 / data.rates[3].rate;
-      userCurrencyToXrp = 1 / data.rates[7].rate;
-      userCurrencyToBch = 1 / data.rates[15].rate;
-      userCurrencyToEth = 1 / data.rates[252].rate;
-      userCurrencyToEos = 1 / data.rates[8].rate;
-
-      SubStr();
-
-      document.getElementById('moving-header1').innerHTML = "BTC: " + userCurrencyToBtc + "&nbsp;&nbsp;&nbsp;&nbsp;XRP: " + userCurrencyToXrp + "&nbsp;&nbsp;&nbsp;&nbsp;LTC: " + userCurrencyToLtc + "&nbsp;&nbsp;&nbsp;&nbsp;EOS: " + userCurrencyToEos + "&nbsp;&nbsp;&nbsp;&nbsp;BCH: " + userCurrencyToBch + "&nbsp;&nbsp;&nbsp;&nbsp;ETH: " + userCurrencyToEth;
-
-    })
-    .catch(function(m) {
-      console.log(m)
-    });
-}
 
 }
