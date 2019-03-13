@@ -60,7 +60,7 @@ a {
 
 #content-container {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns:100%;
   word-wrap: break-word;
   margin-bottom: 5%;
 }
