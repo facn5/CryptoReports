@@ -1,41 +1,73 @@
-var currency_api_key = "?apikey=DD681900-C114-4475-8363-6D40C5C5B027";
-var crypto_api_url = "https://rest.coinapi.io/v1/exchangerate/NIS";
-var nisToBtc = "";
-var nisToLtc = "";
-var nisToXrp = "";
-var nisToBch = "";
-var nisToEos = "";
+var currency_api_key = "?apikey=F642409A-2750-43F8-BB06-46272975B85E";
+var crypto_api_url = "https://rest.coinapi.io/v1/exchangerate/";
+var userCurrency = ""
+var userCurrencyToBtc = "";
+var userCurrencyToLtc = "";
+var userCurrencyToXrp = "";
+var userCurrencyToBch = "";
+var userCurrencyToEos = "";
 
 function SubStr()
 {
-  nisToBtc = nisToBtc.toString().substr(0,8);
-  nisToLtc = nisToLtc.toString().substr(0,8);
-  nisToBch = nisToBch.toString().substr(0,8);
-  nisToEos = nisToEos.toString().substr(0,8);
-  nisToXrp = nisToXrp.toString().substr(0,8);
-  nisToEth = nisToEos.toString().substr(0,8);
+  userCurrencyToBtc = userCurrencyToBtc.toString().substr(0,8);
+  userCurrencyToLtc = userCurrencyToLtc.toString().substr(0,8);
+  userCurrencyToBch = userCurrencyToBch.toString().substr(0,8);
+  userCurrencyToEos = userCurrencyToEos.toString().substr(0,8);
+  userCurrencyToXrp = userCurrencyToXrp.toString().substr(0,8);
+  userCurrencyToEth = userCurrencyToEos.toString().substr(0,8);
 }
 
 function buttonClicked() {
-fetch(crypto_api_url+currency_api_key)
+  console.log(continent)
+
+  if ( continent == "Asia" )
+  {
+    userCurrency = "NIS"
+fetch(crypto_api_url + userCurrency + currency_api_key)
   .then(function(response) {
     return response.json();
   })
   .then(function(data) {
-    nisToBtc = 1 / data.rates[0].rate;
-    nisToLtc = 1 / data.rates[1].rate;
-    nisToXrp = 1 / data.rates[52].rate;
-    nisToBch = 1 / data.rates[49].rate;
-    nisToEth = 1 / data.rates[11].rate;
-    nisToEos = 1 / data.rates[6].rate;
+    userCurrencyToBtc = 1 / data.rates[0].rate;
+    userCurrencyToLtc = 1 / data.rates[1].rate;
+    userCurrencyToXrp = 1 / data.rates[52].rate;
+    userCurrencyToBch = 1 / data.rates[49].rate;
+    userCurrencyToEth = 1 / data.rates[11].rate;
+    userCurrencyToEos = 1 / data.rates[6].rate;
 
     SubStr();
 
-    document.getElementById('moving-header1').innerHTML = "BTC: "+nisToBtc + "&nbsp;&nbsp;&nbsp;&nbsp;XRP: "+nisToXrp+"&nbsp;&nbsp;&nbsp;&nbsp;LTC: "+nisToLtc+"&nbsp;&nbsp;&nbsp;&nbsp;EOS: "+nisToEos+"&nbsp;&nbsp;&nbsp;&nbsp;BCH: "+nisToBch +"&nbsp;&nbsp;&nbsp;&nbsp;ETH: "+nisToEth;
+    document.getElementById('moving-header1').innerHTML = "BTC: " + userCurrencyToBtc + "&nbsp;&nbsp;&nbsp;&nbsp;XRP: " + userCurrencyToXrp + "&nbsp;&nbsp;&nbsp;&nbsp;LTC: " + userCurrencyToLtc + "&nbsp;&nbsp;&nbsp;&nbsp;EOS: " + userCurrencyToEos + "&nbsp;&nbsp;&nbsp;&nbsp;BCH: " + userCurrencyToBch + "&nbsp;&nbsp;&nbsp;&nbsp;ETH: " + userCurrencyToEth;
 
   })
   .catch(function(m) {
     console.log(m)
   });
+}
+else if ( continent == "Europe" )
+{
+  userCurrency = "EUR"
+
+  fetch(crypto_api_url + userCurrency + currency_api_key)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      userCurrencyToBtc = 1 / data.rates[1].rate;
+      userCurrencyToLtc = 1 / data.rates[3].rate;
+      userCurrencyToXrp = 1 / data.rates[7].rate;
+      userCurrencyToBch = 1 / data.rates[15].rate;
+      userCurrencyToEth = 1 / data.rates[252].rate;
+      userCurrencyToEos = 1 / data.rates[8].rate;
+
+      SubStr();
+
+      document.getElementById('moving-header1').innerHTML = "BTC: " + userCurrencyToBtc + "&nbsp;&nbsp;&nbsp;&nbsp;XRP: " + userCurrencyToXrp + "&nbsp;&nbsp;&nbsp;&nbsp;LTC: " + userCurrencyToLtc + "&nbsp;&nbsp;&nbsp;&nbsp;EOS: " + userCurrencyToEos + "&nbsp;&nbsp;&nbsp;&nbsp;BCH: " + userCurrencyToBch + "&nbsp;&nbsp;&nbsp;&nbsp;ETH: " + userCurrencyToEth;
+
+    })
+    .catch(function(m) {
+      console.log(m)
+    });
+}
 
 }
