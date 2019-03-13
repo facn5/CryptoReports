@@ -1,5 +1,5 @@
-let ipify = "";
-let continent = "";
+var ipify = "";
+var continent = "";
 
 fetch(`https://api.ipify.org/?format=json`)
   .then(function(response) {
@@ -21,7 +21,7 @@ function getCurrency(userIP) {
       return response.json();
     })
     .then(function(data) {
-      continent = ['continent_name'];
+      continent = data['continent_name'];
       setCurrency(continent);
     })
     .catch(function(error) {
@@ -31,6 +31,6 @@ function getCurrency(userIP) {
 }
 
 function setCurrency(defaultCurr) {
-  
+
 
 }
