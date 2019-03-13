@@ -19,6 +19,7 @@
     })
     .then(function(data) {
       console.log(data);
+      continent = data['continent_name']
     })
     .catch(function(error) {
       console.log(error);
