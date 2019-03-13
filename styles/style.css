@@ -1,14 +1,9 @@
-:root{
---nex=#55ebc2;
-
-
+:root {
+  --nex=#55ebc2;
 }
 
-
-
 body {
-
-background-color: #f1f1f1;
+  background-color: #f1f1f1;
   margin: 0;
   transition: opacity 1s ease;
   font-family: "Playfair Display";
@@ -25,8 +20,7 @@ h3 {
 
 button {
   margin-top: 7px;
-
-background-color: #fcc118;
+  background-color: #fcc118;
   color: black;
   border: none;
   transition: all .5s ease;
@@ -36,7 +30,7 @@ background-color: #fcc118;
 
 button:hover {
   cursor: pointer;
-  color:#fcc118;
+  color: #fcc118;
   font-weight: 700;
   background-color: white;
   transform: scale(1.1);
@@ -62,13 +56,11 @@ a {
   text-align: center;
 }
 
-
 #content-container {
   display: grid;
   grid-template-columns: 50% 50%;
   word-wrap: break-word;
   margin-bottom: 5%;
-
 }
 
 .box {
@@ -85,6 +77,7 @@ border-radius: 10%;
 h1 {
   user-select: none;
   -webkit-user-select: none;
+  font-family: 'Sniglet';
 }
 
 header {
@@ -113,9 +106,8 @@ p {
 #moving-header {
   display: block;
   box-shadow: 4px 0px 12px #fcc118 inset;
-background-color: #353536;
+  background-color: #353536;
   text-align: right;
-
   width: 100%;
 }
 
@@ -173,10 +165,7 @@ background-color: #353536;
   #moving-header {
     position: relative;
     margin: 0;
-
-
-        box-shadow: 4px 0px 12px #fcc118 inset;
-
+    box-shadow: 4px 0px 12px #fcc118 inset;
     grid-column: 1/4;
   }
 
