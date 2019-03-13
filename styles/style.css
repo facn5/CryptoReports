@@ -7,6 +7,8 @@ body {
   margin: 0;
   transition: opacity 1s ease;
   font-family: "Playfair Display";
+  word-break: break-all;
+
 }
 
 h3 {
@@ -91,6 +93,8 @@ p {
   text-align: center;
   word-break: break-all;
   color: #666;
+  word-break: break-all;
+
 }
 
 #header h1 {
