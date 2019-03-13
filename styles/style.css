@@ -67,7 +67,7 @@ a {
 
 h1 {
   user-select: none;
-  -webkit-user-select:none;
+  -webkit-user-select: none;
 }
 
 header {
@@ -106,7 +106,7 @@ p {
   letter-spacing: 2px;
   cursor: text;
   user-select: none;
-  -webkit-user-select:none;
+  -webkit-user-select: none;
   text-align: right;
   animation: marquee 15s linear infinite;
   margin: 0;
@@ -147,7 +147,6 @@ p {
   #moving-header1:empty {
     height: 2vw;
     cursor: default;
-
   }
 
   #moving-header {
