@@ -1,7 +1,17 @@
+:root{
+--nex=#55ebc2;
+
+
+}
+
+
+
 body {
-  background-color: #dadada;
+
+background-color: #f1f1f1;
   margin: 0;
   transition: opacity 1s ease;
+  font-family: "Playfair Display";
 }
 
 h3 {
@@ -15,16 +25,18 @@ h3 {
 
 button {
   margin-top: 7px;
-  background-color: green;
-  color: white;
+
+background-color: #fcc118;
+  color: black;
   border: none;
   transition: all .5s ease;
   padding: 10px;
+  border-radius: 15%;
 }
 
 button:hover {
   cursor: pointer;
-  color: green;
+  color:#fcc118;
   font-weight: 700;
   background-color: white;
   transform: scale(1.1);
@@ -38,6 +50,7 @@ img {
   top: 25px;
   transition: all 1.2s ease;
   align-self: center;
+  border-radius: 10%;
 }
 
 img:hover {
@@ -49,20 +62,24 @@ a {
   text-align: center;
 }
 
+
 #content-container {
   display: grid;
   grid-template-columns: 50% 50%;
   word-wrap: break-word;
   margin-bottom: 5%;
+
 }
 
 .box {
-  border: 2px solid black;
+  border: 2px solid #fcc118;
   padding: 15px;
   margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ;
+border-radius: 10%;
 }
 
 h1 {
@@ -73,7 +90,7 @@ h1 {
 header {
   margin: 0;
   height: 100%;
-  background: #fdfdfd;
+  background: #353536;
   text-align: center;
 }
 
@@ -84,7 +101,7 @@ p {
 
 #header h1 {
   display: table;
-  color: green;
+  color: var(--nex);
   font-weight: 400;
   text-align: center;
   margin: auto;
@@ -94,8 +111,10 @@ p {
 
 #moving-header {
   display: block;
+  box-shadow: 4px 0px 12px #fcc118 inset;
+background-color: #353536;
   text-align: right;
-  background: green;
+
   width: 100%;
 }
 
@@ -104,6 +123,7 @@ p {
   padding: 20px;
   font-size: 18px;
   letter-spacing: 2px;
+  color: white;
   cursor: text;
   user-select: none;
   -webkit-user-select: none;
@@ -152,7 +172,10 @@ p {
   #moving-header {
     position: relative;
     margin: 0;
-    background: green;
+
+
+        box-shadow: 4px 0px 12px #fcc118 inset;
+
     grid-column: 1/4;
   }
 
