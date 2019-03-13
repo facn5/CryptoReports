@@ -29,8 +29,6 @@ fetch("https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=decbac612c734ab
 
   CheckIfImageIsNull();
 
-  console.log(data.articles[0].title);
-
 
   //getting the article links
 
@@ -44,7 +42,7 @@ fetch("https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=decbac612c734ab
  })
  .catch(function() {
         console.log("error");
-    });
+    });g
 
 function CheckIfImageIsNull() {
  if (document.getElementById("boximg1").src == null)
