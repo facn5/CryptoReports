@@ -3,41 +3,22 @@ fetch("https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=decbac612c734ab
  .then(function(data) {
 
   //getting the titles
-  document.getElementById("box1").textContent = data.articles[0].title;
-  document.getElementById("box2").textContent = data.articles[1].title;
-  document.getElementById("box3").textContent = data.articles[2].title;
-  document.getElementById("box4").textContent = data.articles[3].title;
-  document.getElementById("box5").textContent = data.articles[4].title;
-  document.getElementById("box6").textContent = data.articles[5].title;
 
 
-  //getting the description
-  document.getElementById("description1").textContent = data.articles[0].description;
-  document.getElementById("description2").textContent = data.articles[1].description;
-  document.getElementById("description3").textContent = data.articles[2].description;
-  document.getElementById("description4").textContent = data.articles[3].description;
-  document.getElementById("description5").textContent = data.articles[4].description;
-  document.getElementById("description6").textContent = data.articles[5].description;
+  for(var i=0;i<6;i++){
+   document.getElementById("box"+(i+1)).textContent = data.articles[i].title;
+   document.getElementById("description"+(i+1)).textContent = data.articles[i].description;
+   document.getElementById("boximg"+(i+1)).src = data.articles[i].urlToImage;
+  document.getElementById("url"+(i+1)).href=data.articles[i].url;
 
-  //getting the images
-  document.getElementById("boximg1").src = data.articles[0].urlToImage;
-  document.getElementById("boximg2").src = data.articles[1].urlToImage;
-  document.getElementById("boximg3").src = data.articles[2].urlToImage;
-  document.getElementById("boximg4").src = data.articles[3].urlToImage;
-  document.getElementById("boximg5").src = data.articles[4].urlToImage;
-  document.getElementById("boximg6").src = data.articles[5].urlToImage;
+  }
+
+
 
   CheckIfImageIsNull();
 
 
-  //getting the article links
 
-  document.getElementById("url1").href = data.articles[0].url;
-  document.getElementById("url2").href = data.articles[1].url;
-  document.getElementById("url3").href = data.articles[2].url;
-  document.getElementById("url4").href = data.articles[3].url;
-  document.getElementById("url5").href = data.articles[4].url;
-  document.getElementById("url6").href = data.articles[5].url;
 
  })
  .catch(function() {
