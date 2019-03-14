@@ -18,6 +18,7 @@ function SubStr()
 }
 
 
+setTimeout(function(){
   if ( continent == "Asia" ) userCurrency = "NIS";
   else if (continent == "Europe") userCurrency = "EUR";
   else if (continent == "Australia") userCurrency = "AUD";
@@ -68,3 +69,4 @@ fetch(crypto_api_url + userCurrency + currency_api_key)
   .catch(function(m) {
     console.log(m)
   });
+}, 5000);

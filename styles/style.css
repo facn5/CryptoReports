@@ -3,7 +3,7 @@ body {
   margin: 0;
   transition: opacity 1s ease;
   font-family: "Playfair Display";
-  word-break: break-all;
+  word-break: break-word;
 
 }
 
@@ -26,7 +26,7 @@ button {
  -webkit-user-drag:none;
   transition: all .5s ease;
   padding: 10px;
-  border-radius: 15%;
+  border-radius: 50px;
 }
 
 button:hover {
@@ -48,7 +48,7 @@ img {
   top: 25px;
   transition: all 1.2s ease;
   align-self: center;
-  border-radius: 10%;
+  border-radius: 50px;
 }
 
 img:hover {
@@ -75,7 +75,7 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: ;
-border-radius: 10%;
+  border-radius: 50px;
 }
 
 h1 {
