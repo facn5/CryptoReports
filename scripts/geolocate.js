@@ -1,5 +1,13 @@
   let ipify = "";
   let continent = "";
+  let currency_api_key = "?apikey=DD681900-C114-4475-8363-6D40C5C5B027";
+  let crypto_api_url = "https://rest.coinapi.io/v1/exchangerate/";
+  let userCurrency = ""
+  let userCurrencyToBtc = "";
+  let userCurrencyToLtc = "";
+  let userCurrencyToXrp = "";
+  let userCurrencyToBch = "";
+  let userCurrencyToEos = "";
 
   fetch(`https://api.ipify.org/?format=json`)
     .then(function(response) {
@@ -21,19 +29,11 @@
     .then(function(){
       loadAndConvertCurrencies();
     })
-
     .catch(function(error) {
       console.log(error);
     })
 
-    var currency_api_key = "?apikey=F642409A-2750-43F8-BB06-46272975B85E";
-    var crypto_api_url = "https://rest.coinapi.io/v1/exchangerate/";
-    var userCurrency = ""
-    var userCurrencyToBtc = "";
-    var userCurrencyToLtc = "";
-    var userCurrencyToXrp = "";
-    var userCurrencyToBch = "";
-    var userCurrencyToEos = "";
+
 
     function SubStr()
     {
@@ -48,6 +48,7 @@
 
 function loadAndConvertCurrencies()
 {
+
       if ( continent == "Asia" ) userCurrency = "NIS";
       else if (continent == "Europe") userCurrency = "EUR";
       else if (continent == "Australia") userCurrency = "AUD";

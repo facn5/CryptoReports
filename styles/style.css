@@ -85,17 +85,16 @@ h1 {
   font-family: 'Sniglet';
 }
 
-header {
-  margin: 0;
-  height: 100%;
-  background: #353536;
-  text-align: center;
-}
-
-p {
+div :nth-child(2) {
   text-align: center;
   color: #666;
-  word-break: break-all;
+
+}
+
+.box p {
+  text-align: center;
+  color: #666;
+  text-align: justify;
 
 }
 
