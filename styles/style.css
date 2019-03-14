@@ -95,7 +95,7 @@ header {
 p {
   text-align: center;
   color: #666;
-  word-break: break-all;
+  text-align: justify;
 
 }
 
