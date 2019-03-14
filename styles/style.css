@@ -127,6 +127,7 @@ div :nth-child(2) {
   -webkit-user-select: none;
   -webkit-user-drag:none;
   text-align: right;
+  white-space: nowrap;
   animation: marquee 15s linear infinite;
   margin: 0;
 }
