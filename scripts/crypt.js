@@ -17,8 +17,6 @@ function SubStr()
   userCurrencyToEth = userCurrencyToEos.toString().substr(0,8);
 }
 
-function buttonClicked() {
-  console.log(continent)
 
   if ( continent == "Asia" ) userCurrency = "NIS";
   else if (continent == "Europe") userCurrency = "EUR";
@@ -70,5 +68,3 @@ fetch(crypto_api_url + userCurrency + currency_api_key)
   .catch(function(m) {
     console.log(m)
   });
-
-}
