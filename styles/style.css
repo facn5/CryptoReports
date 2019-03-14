@@ -2,7 +2,7 @@ body {
   background-color: #f1f1f1;
   margin: 0;
   transition: opacity 1s ease;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   word-break: break-word;
 
 }
