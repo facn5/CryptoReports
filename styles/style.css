@@ -153,11 +153,6 @@ div :nth-child(2) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  img {
-    height: 300px;
-    width: auto;
-  }
-
   .box {
     display: flex;
     justify-content: center;
